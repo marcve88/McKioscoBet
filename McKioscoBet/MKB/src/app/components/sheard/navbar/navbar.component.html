@@ -11,7 +11,7 @@
           Apuestas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Animalitos</a>
+          <a class="dropdown-item" [routerLink]="['Animalitos']" href="#">Animalitos</a>
           <a class="dropdown-item disabled" href="#">Frutas</a>
           <a class="dropdown-item disabled" href="#">Otros</a>
         </div>
@@ -21,13 +21,12 @@
           Lista
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Ganadores</a>
+          <a class="dropdown-item" [routerLink]="['Ganadores']" href="#">Ganadores</a>
           <a class="dropdown-item disabled" href="#">Apuestas</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link"
-           href="#">Reportes</a>
+        <a class="nav-link" [routerLink]="['Reportes']" href="#">Reportes</a>
       </li>
     </ul>
     <span class="navbar-text">

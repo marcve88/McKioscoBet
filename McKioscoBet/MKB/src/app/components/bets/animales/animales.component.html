@@ -1,3 +1,48 @@
-<p>
-  animales works!
-</p>
+<div class="container">
+<br>
+<br>
+<br>
+<form #f="ngForm" (ngSubmit)="addbet(f)" novalidate>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Bs</span>
+        <input type="text" class="form-control" placeholder="Valor" aria-describedby="basic-addon1" id="bs" name="bs" ngModel>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Numero Animalitos</span>
+        <input type="text" class="form-control" placeholder="Numero" aria-describedby="basic-addon1" id="Animal" name="Animal" ngModel>
+      </div>
+    </div>
+    <button class="btn btn-secondary" type="submit" name="button">Agregar</button>
+  </div>
+</form>
+<br><br>
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Animalitos</th>
+      <th>Apuesta</th>
+      <th>Premio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let bets of MyArrayType; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{bets.bs}}</td>
+      <td>{{bets.Animal}}</td>
+      <td>{{bets.bs*30}}</td>
+    </tr>
+    <tr >
+      <th>Total apuesta</th>
+      <td>{{Totalbs}}</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="sendbet()" class="btn btn-secondary" type="button" name="button">Finaizar Apuesta</button>
+</div>
